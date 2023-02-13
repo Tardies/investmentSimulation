@@ -69,14 +69,14 @@ class Region():
     
 
 world = Region()
-print("Month: ", i+1)
+print("Month: ", 1)
 print("Population: ", Pop.getCount())
 print("Fond money: ", fond)
 print("MoPs: ", world.MoP)
 print("GDP: ", GDP)
 print("GDP per capita: ", GDP / Pop.getCount())
 
-for i in range(0, 12):
+for i in range(1, 12):
     world.newMonth(i+5)
     print("Month: ", i+1)
     print("Population: ", Pop.getCount())
