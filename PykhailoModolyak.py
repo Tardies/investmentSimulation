@@ -1,7 +1,8 @@
 import random
 
 fond = 0
-GDP = 8.92*10**10
+GDP = 7.98*10**9
+EveryMonth = [GDP]
 
 class Pop():
     count = 0
@@ -68,13 +69,25 @@ class Region():
     
 
 world = Region()
+print("Month: ", i+1)
+print("Population: ", Pop.getCount())
+print("Fond money: ", fond)
+print("MoPs: ", world.MoP)
+print("GDP: ", GDP)
+print("GDP per capita: ", GDP / Pop.getCount())
 
 for i in range(0, 12):
+    world.newMonth(i+5)
     print("Month: ", i+1)
     print("Population: ", Pop.getCount())
     print("Fond money: ", fond)
     print("MoPs: ", world.MoP)
-    print("GDP: ", GDP)
-    print("GDP per capita: ", GDP / Pop.getCount())
-    world.newMonth(i+5)
+    print("GRP: ", GDP)
+    print("GRP per capita: ", GDP / Pop.getCount())
+    EveryMonth.append(GDP)
     print()
+
+x = 0
+for i in EveryMonth:
+    x += i
+print("GDP(annual): ", x)
